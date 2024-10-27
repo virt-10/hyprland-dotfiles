@@ -44,3 +44,4 @@ source ~/.config/zsh/scripts/bling.sh
 source ~/.config/zsh/scripts/completions.sh
 source ~/.config/zsh/scripts/aliases.sh
 source ~/.config/zsh/scripts/containers.sh
+source ~/.config/zsh/scripts/path.sh
