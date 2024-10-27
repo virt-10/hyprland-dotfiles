@@ -1,0 +1,86 @@
+@define-color text rgba(205, 214, 244, 1.0);
+@define-color hover rgba(255, 255, 255, 0.1);
+@define-color activeWorkspace rgba(116, 199, 236, 0.5);
+@define-color background rgba(17, 17, 27, 0.5);
+
+* {
+    border: none;
+    border-radius: 0.1rem;
+    font-family: "0xProto Nerd Font Mono";
+    font-size: 1rem;
+    min-height: 0;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+window#waybar {
+    background: @background;
+    border-bottom: 0.1rem solid @background;
+    color: @text;
+}
+
+tooltip {
+    background: @background;
+    border: 0.1rem solid @background;
+}
+
+tooltip label {
+    color: @text;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @text;
+    transition: background 0.3s ease;
+}
+
+#workspaces button.active {
+    background: @activeWorkspace;
+    border-bottom: 0.1rem solid @text;
+}
+
+#workspaces button:hover {
+    background: @hover;
+}
+
+#clock,
+#battery,
+#idle_inhibitor,
+#pulseaudio,
+#power-profiles-daemon,
+#temperature,
+#tray,
+#custom-notification,
+#custom-media,
+#custom-power,
+#custom-hyprshot,
+#custom-hyprshade {
+    padding: 0 0.25rem 0 0.25rem;
+}
+
+#clock {
+    background-color: @background;
+}
+
+/* #battery {
+    background-color: #ffffff;
+    color: black;
+    } */
+
+/* #battery.charging {
+        color: white;
+        background-color: palevioletred;
+    } */
+
+/* #battery.warning:not(.charging) {
+        background: #f53c3c;
+        color: white;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: steps(12);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    } */
+
+#custom-notification {
+    font-family: "0xProto Nerd Font Mono";
+}

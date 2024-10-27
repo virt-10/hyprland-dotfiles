@@ -1,0 +1,5 @@
+@define-color foreground rgba(205, 214, 244, 1.0);
+@define-color color1 rgba(17, 17, 27, 0.75); /* background */
+@define-color color2 rgba(243, 139, 168, 1.0); /* urgent */
+@define-color color3 rgba(116, 199, 236, 0.90); /* selected*/
+@define-color color4 rgba(30, 30, 46, 0.90); /* hover */

@@ -1,0 +1,51 @@
+@define-color text rgba(205, 214, 244, 1.0);
+@define-color selected rgba(116, 199, 236, 0.5);
+@define-color background rgba(30, 30, 46, 0.5);
+@define-color background-alt rgba(17, 17, 27, 0.5);
+
+* {
+    font-family: "0xProto Nerd Font";
+}
+
+window {
+    background-color: @background;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 0px;
+    border: none;
+    background-color: @background;
+    color: @text;
+}
+
+#inner-box {
+    background-color: @background;
+}
+
+#outer-box {
+    margin: 2px;
+    padding: 10px;
+    background-color: @background;
+}
+
+#scroll {
+    margin: 5px;
+}
+
+#text {
+    padding: 4px;
+    color: @text;
+}
+
+#entry:nth-child(even) {
+    background-color: @background-alt;
+}
+
+#entry:selected {
+    background-color: @selected;
+}
+
+#text:selected {
+    background: transparent;
+}
