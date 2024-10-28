@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: @background;
     color: @text;
 }
 
