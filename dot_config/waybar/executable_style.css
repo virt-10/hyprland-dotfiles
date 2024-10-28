@@ -7,9 +7,9 @@
 * {
     border: none;
     border-radius: 0.2rem;
-    font-family: "0xProto Nerd Font Mono";
+    font-family: "FiraCode Nerd Font Mono SemBd";
     font-size: 1rem;
-    min-height: 0;
+    min-height: 0.5rem;
 }
 
 window#waybar {
@@ -29,12 +29,12 @@ tooltip label {
 .modules-left,
 .modules-center,
 .modules-right {
+    padding: 0 0.5rem;
     background: @background;
     border: 0.15rem solid @text;
 }
 
 .modules-right {
-    padding: 0 1rem;
 }
 
 #workspaces button {

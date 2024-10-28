@@ -4,7 +4,7 @@
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   //"height": 28, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 6, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "mpd", "custom/media"],
   "modules-center": ["clock"],
@@ -18,9 +18,9 @@
     //"memory",
     //"temperature",
     "pulseaudio",
-    "tray",
-    "custom/power",
+    //"custom/power",
     "custom/notification",
+    "tray",
   ],
   // Modules configuration
   "hyprland/workspaces": {

@@ -6,13 +6,13 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# 0xProto
+# Fira Code
 
-An opinionated font for software engineers.
+**Fira Code** is a free monospaced font with programming ligatures.
 
-For more information have a look at the upstream website: https://github.com/0xType/0xProto
+For more information have a look at the upstream website: https://github.com/tonsky/FiraCode
 
-Version: 1.603
+Version: 6.2
 
 ## Which font?
 
@@ -36,7 +36,7 @@ Once you narrow down your font choice of family (`Droid Sans`, `Inconsolata`, et
 #### `Option 1: Download already patched font`
 
  * For a stable version download a font package from the [release page](https://github.com/ryanoasis/nerd-fonts/releases)
- * Direct links for [0xProto.zip](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/0xProto.zip) or [0xProto.tar.xz](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/0xProto.tar.xz)
+ * Or download the development version from the folders here
 
 #### `Option 2: Patch your own font`
 
