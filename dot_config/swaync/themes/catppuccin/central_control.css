@@ -1,4 +1,5 @@
 @define-color text            @foreground;
+@define-color background rgba(17, 17, 27, 0.45);
 @define-color background-alt  @color1;
 @define-color selected        @color4;
 @define-color hover           @selected;
