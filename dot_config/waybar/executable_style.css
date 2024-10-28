@@ -2,6 +2,7 @@
 @define-color hover rgba(255, 255, 255, 0.1);
 @define-color activeWorkspace rgba(116, 199, 236, 0.5);
 @define-color background rgba(17, 17, 27, 0.5);
+@define-color urgent rgba(230, 69, 83, 0.5);
 
 * {
     border: none;
@@ -39,6 +40,10 @@ tooltip label {
 
 #workspaces button:hover {
     background: @hover;
+}
+
+#workspaces button.urgent {
+    background: @urgent;
 }
 
 #clock,
