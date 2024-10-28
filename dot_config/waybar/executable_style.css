@@ -57,10 +57,6 @@ tooltip label {
     padding: 0 0.2rem 0 0.2rem;
 }
 
-#clock {
-    background-color: @background;
-}
-
 /* #battery {
     background-color: #ffffff;
     color: black;
