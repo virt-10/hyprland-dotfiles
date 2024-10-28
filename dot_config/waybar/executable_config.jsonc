@@ -16,7 +16,7 @@
     "power-profiles-daemon",
     //"cpu",
     //"memory",
-    "temperature",
+    //"temperature",
     "pulseaudio",
     "tray",
     "custom/power",
