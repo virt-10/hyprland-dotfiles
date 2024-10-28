@@ -177,7 +177,7 @@
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power": {
-    "format": "⏻ ",
+    "format": "⏻",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/scripts/power_menu.xml", // Menu file in resources folder
@@ -209,14 +209,14 @@
     "escape": true,
   },
   "custom/hyprshot": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
     "on-click": "hyprshot -m region --freeze --output-folder ~/Pictures/Hyprshot",
     "on-click-right": "hyprshot -m window --freeze --output-folder ~/Pictures/Hyprshot",
     "on-click-middle": "hyprshot -m window --freeze --clipboard-only",
   },
   "custom/hyprshade": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
     "on-click": "hyprshade off",
     "on-scroll-up": "hyprshade on color",
