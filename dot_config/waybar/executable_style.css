@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-    background: @background;
+    background: transparent;
     color: @text;
 }
 
@@ -26,10 +26,27 @@ tooltip label {
     color: @text;
 }
 
+.modules-left {
+    padding: 0 0.2rem 0 0.2rem;
+    background: @background;
+    border: 0.1rem solid @text;
+}
+
+.modules-center {
+    padding: 0 0.2rem 0 0.2rem;
+    background: @background;
+    border: 0.1rem solid @text;
+}
+
+.modules-right {
+    padding: 0 0.2rem 0 0.2rem;
+    background: @background;
+    border: 0.1rem solid @text;
+}
+
 #workspaces button {
     background: transparent;
     color: @text;
-    padding: 0 0.2rem 0 0.2rem;
     transition: background 0.3s ease;
 }
 
@@ -44,22 +61,6 @@ tooltip label {
 
 #workspaces button.urgent {
     background: @urgent;
-}
-
-#clock,
-#battery,
-#idle_inhibitor,
-#pulseaudio,
-#power-profiles-daemon,
-#temperature,
-#tray,
-#custom-notification,
-#custom-media,
-#custom-power,
-#custom-hyprshot,
-#custom-hyprshade {
-    font-size: 1.15rem;
-    padding: 0 0.2rem 0 0.2rem;
 }
 
 #idle_inhibitor.activated {
@@ -85,7 +86,3 @@ tooltip label {
         animation-iteration-count: infinite;
         animation-direction: alternate;
     } */
-
-#custom-notification {
-    font-family: "0xProto Nerd Font Mono";
-}
