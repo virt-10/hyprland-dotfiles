@@ -61,6 +61,10 @@ tooltip label {
     padding: 0 0.2rem 0 0.2rem;
 }
 
+#idle_inhibitor.activated {
+    color: @urgent;
+}
+
 /* #battery {
     background-color: #ffffff;
     color: black;
