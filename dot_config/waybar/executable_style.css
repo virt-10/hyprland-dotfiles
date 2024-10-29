@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: @background;
     color: @text;
 }
 
@@ -31,7 +31,6 @@ tooltip label {
 .modules-right {
     padding: 0 0.5rem;
     background: @background;
-    border: 0.15rem solid @text;
 }
 
 .modules-right {
