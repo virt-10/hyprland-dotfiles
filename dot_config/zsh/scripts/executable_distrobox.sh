@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
 
 
-# Get pretty name from podman
-# Check if container is a distrobox
+# Get distrobox containers
 get_containers (){
-	PODMAN_CONTAINERS=$(podman ps -a --format "{{.Names}}")
-
-	for DISTROBOX_CONTAINERS in ${PODMAN_CONTAINERS}; do
-		if distrobox-list | grep -q "${DISTROBOX_CONTAINERS}"; then
-			echo "${DISTROBOX_CONTAINERS}"
-		fi
-	done
+    podman ps -a --filter label=manager=distrobox --format "{{.Names}}"
 }
 
 # Distrobox remove
