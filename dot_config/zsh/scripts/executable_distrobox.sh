@@ -27,6 +27,7 @@ blublu_containers (){
             -i ghcr.io/virt-10/"${SELECT_CONTAINER}":latest \
             --additional-flags "--device nvidia.com/gpu=all --security-opt=label=disable" \
             --volume /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/nvidia_icd.json:ro
+    fi
 }
 
 # Distrobox remove
@@ -34,6 +35,8 @@ remove_container (){
 	echo "This will stop and remove the selected container."
 	SELECT_CONTAINER=$(get_containers | gum choose)
 	echo "${SELECT_CONTAINER} is being removed."
+	distrobox-stop "${SELECT_CONTAINER}"
+	distrobox-rm "${SELECT_CONTAINER}"
 }
 
 # List and enter selected container
