@@ -14,11 +14,19 @@ blublu_containers (){
     CONTAINER_NAME=$(gum input --placeholder "tmp")
 
     podman pull ghcr.io/virt-10/"${SELECT_CONTAINER}":latest
-    distrobox create -n "${CONTAINER_NAME}" \
-        -H ~/Documents/Distrobox/"${CONTAINER_NAME}" \
-        -i ghcr.io/virt-10/"${SELECT_CONTAINER}":latest \
-        --nvidia \
-        --volume /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/nvidia_icd.json:ro
+
+    if [[ "${SELECT_CONTAINER}" == "blublu-resolve" ]]; then
+        distrobox create -n "${CONTAINER_NAME}" \
+            -H ~/Documents/Distrobox/"${CONTAINER_NAME}" \
+            -i ghcr.io/virt-10/"${SELECT_CONTAINER}":latest \
+            --nvidia \
+            --volume /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/nvidia_icd.json:ro
+    else
+        distrobox create -n "${CONTAINER_NAME}" \
+            -H ~/Documents/Distrobox/"${CONTAINER_NAME}" \
+            -i ghcr.io/virt-10/"${SELECT_CONTAINER}":latest \
+            --additional-flags "--device nvidia.com/gpu=all --security-opt=label=disable" \
+            --volume /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/nvidia_icd.json:ro
 }
 
 # Distrobox remove
