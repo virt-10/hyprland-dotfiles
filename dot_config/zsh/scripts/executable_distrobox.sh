@@ -6,19 +6,26 @@ get_containers (){
     podman ps -a --filter label=manager=distrobox --format "{{.Names}}"
 }
 
+# Blublu
+blublu_containers (){
+    echo "Select Container to install"
+    SELECT_CONTAINER=$(gum choose "blublu-arch" "blublu-resolve" "blublu-gaming")
+    echo "Enter container name"
+    CONTAINER_NAME=$(gum input --placeholder "tmp")
+
+    podman pull ghcr.io/virt-10/"${SELECT_CONTAINER}":latest
+    distrobox create -n "${CONTAINER_NAME}" \
+        -H ~/Documents/Distrobox/"${CONTAINER_NAME}" \
+        -i ghcr.io/virt-10/"${SELECT_CONTAINER}":latest \
+        --nvidia \
+        --volume /usr/share/vulkan/icd.d/nvidia_icd.x86_64.json:/usr/share/vulkan/icd.d/nvidia_icd.json:ro
+}
+
 # Distrobox remove
 remove_container (){
 	echo "This will stop and remove the selected container."
 	SELECT_CONTAINER=$(get_containers | gum choose)
-	echo "Are you sure you want to remove ${SELECT_CONTAINER}"
-	if [[ $(gum choose "yes" "no") = "yes" ]]
-	then
-        distrobox-stop "${SELECT_CONTAINER}"
-        distrobox-rm "${SELECT_CONTAINER}"
-    else
-        echo "distrobox-rm cancelled"
-        exit 0
-    fi
+	echo "${SELECT_CONTAINER} is being removed."
 }
 
 # List and enter selected container
@@ -36,8 +43,9 @@ fi
 # Arguments
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-        --help) echo "--help --remove";;
-        --remove) remove_container;;
+        h) echo "h rm c";;
+        rm) remove_container;;
+        c) blublu_containers;;
         *) echo "Unknown parameter: $1";;
     esac
     shift
